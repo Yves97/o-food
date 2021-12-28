@@ -4,11 +4,11 @@ import {
   Route
 } from "react-router-dom";
 
-//component
-import { Header } from './components/Header/Header';
 //Views
 import Home from './views/Home/Home'
 import About from './views/About/About';
+import Menu from './views/Menu/Menu';
+import DetailsMenu from './views/Menu/Details';
 
 class App extends Component {
   render(): React.ReactNode {
@@ -24,6 +24,9 @@ class App extends Component {
             </main>
             }
           />
+          <Route path="/menu" element={<Menu/>}/>
+          <Route path="/menu/:id" element={<DetailsMenu/>} />
+          
       </Routes>
     );
   }
